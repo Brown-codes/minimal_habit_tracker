@@ -1,0 +1,23 @@
+import 'package:flutter/material.dart';
+import 'package:minimal_habit_tracker/theme/dark_theme.dart';
+import 'package:minimal_habit_tracker/theme/light_theme.dart';
+
+class ThemeProvider extends ChangeNotifier{
+  ThemeData _themeData = lightTheme;
+  ThemeData get themeData => _themeData;
+
+  bool get isDarkTheme => _themeData == darkTheme;
+
+  set themeData(ThemeData themeData) {
+    _themeData = themeData;
+    notifyListeners();
+  }
+
+  void toggleTheme(){
+    if(_themeData == lightTheme){
+      themeData = darkTheme;
+    }else{
+      themeData = lightTheme;
+    }
+  }
+}
