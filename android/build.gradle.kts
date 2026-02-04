@@ -5,7 +5,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-    }
+    }git config --global user.email "you@example.com"
     // "NUCLEAR" FIX: Force older versions of libraries that don't need lStar
     configurations.all {
         resolutionStrategy {
